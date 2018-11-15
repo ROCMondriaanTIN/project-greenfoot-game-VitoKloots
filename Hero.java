@@ -36,6 +36,14 @@ public class Hero extends Mover {
                 break;
             }
         }
+        
+        Actor diamand = getOneIntersectingObject(Diamand.class);
+        {
+            if(diamand != null)
+            {
+                getWorld().removeObject(diamand);
+            }
+        }
     }
     public void handleInput() 
     {

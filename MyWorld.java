@@ -83,7 +83,10 @@ public class MyWorld extends World {
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 400, 1000);
+        addObject(hero, 400, 2250);
+        Diamand diamond = new Diamand();
+        addObject(diamond, 400, 2100);
+        addObject(new Scoreboard(), 70, 30);
         //addObject(new Enemy(), 1170, 410);
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
