@@ -6,8 +6,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author R. Springer
  */
 public class MyWorld extends World {
+    
 
     private CollisionEngine ce;
+    private Scoreboard scoreboard;
     
     /**
      * Constructor for objects of class MyWorld.
@@ -17,7 +19,8 @@ public class MyWorld extends World {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
         this.setBackground("BERGEN ACHTERGROND1.jpg");
-
+      
+        
         int[][] map = {
                 {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
 {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
@@ -86,7 +89,11 @@ public class MyWorld extends World {
         addObject(hero, 400, 2250);
         Diamand diamond = new Diamand();
         addObject(diamond, 400, 2100);
-        addObject(new Scoreboard(), 70, 30);
+        addObject(new Diamand(), 200, 100);
+        addObject(new Diamant(), 29, 30);
+        scoreboard = new Scoreboard();
+        addObject(scoreboard, 69, 29);
+        
         //addObject(new Enemy(), 1170, 410);
         
         // Initialiseren van de CollisionEngine zodat de speler niet door de tile heen kan lopen.
@@ -95,7 +102,11 @@ public class MyWorld extends World {
         // Toevoegen van de mover instantie of een extentie hiervan
         ce.addCollidingMover(hero);
     }
-        
+    
+    public Scoreboard getScoreboard() {
+        return scoreboard;
+    }
+         
     @Override
     public void act() {
         ce.update();

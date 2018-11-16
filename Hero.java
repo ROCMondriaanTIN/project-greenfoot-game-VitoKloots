@@ -10,12 +10,13 @@ public class Hero extends Mover {
     private final double gravity;
     private final double acc;
     private final double drag;
+    public static int diamanten;
 
     public Hero() {
         super();
         gravity = 9.807;
         acc = 0.6;
-        drag = 0.8;
+        drag = 0.9;
         setImage("p1.png");
     }
 
@@ -41,7 +42,13 @@ public class Hero extends Mover {
         {
             if(diamand != null)
             {
+                World myWorld = getWorld();
                 getWorld().removeObject(diamand);
+                diamanten++;
+                MyWorld world = getWorldOfType(MyWorld.class);
+                if(world!= null) {
+                    world.getScoreboard().addDiamanten();
+                }
             }
         }
     }
