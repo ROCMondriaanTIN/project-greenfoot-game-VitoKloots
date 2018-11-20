@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Collectable here.
  * 
@@ -14,6 +14,6 @@ public class Collectable extends Mover
      */
     public void act() 
     {
-        // Add your action code here.
+        ArrayList<Diamand> myWorld = new ArrayList<Diamand>();
     }    
 }

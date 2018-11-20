@@ -8,15 +8,23 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Diamand extends Collectable
 {
-    /**
-     * Act - do whatever the Diamand wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    public static int sID;
+    private int id;
+    
     public Diamand(){
         setImage("gemBlue.png");
+        this.id = sID;
+        sID++;
     }
     public void act() 
     {
         applyVelocity();
-    }    
+        
+        for(Actor diamand : getIntersectingObjects(Diamand.class)) {
+            if (diamand != null) {
+                getWorld().removeObject(this);
+                break;
+            }
+        }    
+    }
 }
