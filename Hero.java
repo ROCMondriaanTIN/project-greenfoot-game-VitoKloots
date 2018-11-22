@@ -52,7 +52,9 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Chain.class))
         {
             if (enemy != null) {
-                    //onGround() == true;
+                if (Greenfoot.isKeyDown("w")) {
+                    velocityY = -15;
+                }
             }
         }
         
@@ -72,7 +74,8 @@ public class Hero extends Mover {
     }
     public void handleInput() 
     {
-        if (Greenfoot.isKeyDown("w")&&(onGround()==true)) {
+        if (Greenfoot.isKeyDown("w")&&(onGround()==true)) 
+        {
             velocityY = -15;
         }
 
@@ -90,9 +93,6 @@ public class Hero extends Mover {
             if(tile.isSolid){
                 return true;
             }
-        }
-        if(isTouching(Chain.class) == true || isTouching({
-            return true;
         }
         return false;
     }
