@@ -37,6 +37,24 @@ public class Hero extends Mover {
                 break;
             }
         }
+        for (Actor enemy : getIntersectingObjects(Water.class)) {
+            if (enemy != null) {
+                Greenfoot.setWorld(new MyWorld());
+                break;
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Lava.class)) {
+            if (enemy != null) {
+                Greenfoot.setWorld(new MyWorld());
+                break;
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Chain.class))
+        {
+            if (enemy != null) {
+                    //onGround() == true;
+            }
+        }
         
         Actor diamand = getOneIntersectingObject(Diamand.class);
         {
@@ -67,7 +85,16 @@ public class Hero extends Mover {
     boolean onGround()
     {
         Actor under = getOneObjectAtOffset(0, getImage().getHeight()/ 2, Tile.class);
-        return under != null;
+        Tile tile = (Tile) under;
+        if(tile!=null){
+            if(tile.isSolid){
+                return true;
+            }
+        }
+        if(isTouching(Chain.class) == true || isTouching({
+            return true;
+        }
+        return false;
     }
     public int getWidth() {
         return getImage().getWidth();

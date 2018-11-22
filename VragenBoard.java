@@ -26,7 +26,7 @@ public class VragenBoard extends Mover
     }    
     void click(){
         if(Greenfoot.mouseClicked(this)){
-            setImage("PlepPlank.png");
+            setImage("Plank.png");
             
         }
         
