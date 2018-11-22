@@ -10,6 +10,8 @@ public class MyWorld extends World {
 
     private CollisionEngine ce;
     private Scoreboard scoreboard;
+    private VragenBoard vragenboard;
+    
     
     /**
      * Constructor for objects of class MyWorld.
@@ -108,13 +110,15 @@ public class MyWorld extends World {
 
         // Alle objecten toevoegen aan de wereld: camera, main karakter en mogelijke enemies
         addObject(camera, 0, 0);
-        addObject(hero, 439, 400);
         Diamand diamond = new Diamand();
         addObject(diamond, 400, 2100);
         addObject(new Diamand(), 200, 100);
         addObject(new Diamant(), 29, 30);
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
+        vragenboard = new VragenBoard();
+        addObject(vragenboard, 725, 2135);
+        addObject(hero, 439, 400);
         
         //addObject(new Enemy(), 1170, 410);
         
