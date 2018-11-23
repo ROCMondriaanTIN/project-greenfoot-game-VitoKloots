@@ -691,18 +691,17 @@ tile = new Tile("rockHillRight.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIG
 tile.isSolid = true;
 break;
 case 114:
-tile = new Tile("ropeAttached.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile = new RopeAttached("ropeAttached.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 break;
 case 115:
 tile = new Tile("ropeHorizontal.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 break;
+
 case 116:
-tile = new Tile("ropeVertical.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile = new RopeVertical("ropeVertical.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 break;
+
 case 117:
-
-
-
 tile = new Tile("sand.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 tile.isSolid = true;
 break;

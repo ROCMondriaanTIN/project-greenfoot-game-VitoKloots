@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+ 
 /**
  * Write a description of class VragenBoard here.
  * 
@@ -9,7 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class VragenBoard extends Mover
 {
     
-        int timer = 1000;
+        
     public VragenBoard()
     {
         setImage("BlenderBord.png");
@@ -18,17 +18,18 @@ public class VragenBoard extends Mover
     {
         applyVelocity();
         click();
-        timer--;
-        if (timer <= 0) {
-           setImage("BlenderBord.png");
-           timer = 1000;
-        }
+        
     }    
     void click(){
         if(Greenfoot.mouseClicked(this)){
-            setImage("Plank.png");
-            
+            String antwoord = Greenfoot.ask("wat is fiets in het engels?");            
+            if("123".equals(antwoord)){     
+                getWorld().addObject(new Diamand(), 1087,2125);
+                getWorld().addObject(new Diamand(), 1187,2125);
+                getWorld().addObject(new Diamand(), 1287,2125);
+                getWorld().removeObject(this);
+            }
         }
         
-    }
+    }    
 }

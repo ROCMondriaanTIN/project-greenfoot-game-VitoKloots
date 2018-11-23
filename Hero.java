@@ -57,6 +57,23 @@ public class Hero extends Mover {
                 }
             }
         }
+        for (Actor enemy : getIntersectingObjects(RopeVertical.class))
+        {
+            if (enemy != null) {
+                if (Greenfoot.isKeyDown("w")) {
+                    velocityY = -15;
+                }
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(RopeAttached.class))
+        {
+            if (enemy != null) {
+                if (Greenfoot.isKeyDown("w")) {
+                    velocityY = -15;
+                }
+            }
+        }
+
         
         Actor diamand = getOneIntersectingObject(Diamand.class);
         {
