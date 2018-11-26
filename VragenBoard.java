@@ -23,7 +23,7 @@ public class VragenBoard extends Mover
     void click(){
         if(Greenfoot.mouseClicked(this)){
             String antwoord = Greenfoot.ask("wat is fiets in het engels?");            
-            if("bike".equals(antwoord)){     
+            if("bike".equals((antwoord)) ||("Bike".equals(antwoord))){     
                 getWorld().addObject(new Diamand(), 1087,2125);
                 getWorld().addObject(new Diamand(), 1187,2125);
                 getWorld().addObject(new Diamand(), 1287,2125);

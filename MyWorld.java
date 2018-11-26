@@ -112,7 +112,7 @@ public class MyWorld extends World {
         addObject(camera, 0, 0);
         Diamand diamond = new Diamand();
         addObject(diamond, 400, 2100);
-        addObject(new Diamand(), 200, 100);
+        addObject(new Diamand(), 400, 2100);
         addObject(new Diamant(), 29, 30);
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
