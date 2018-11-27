@@ -11,6 +11,7 @@ public class Scoreboard extends Actor
     
     private int aantalDiamanten = 0;
     
+    
     public void addDiamanten()
     {
        aantalDiamanten++; 

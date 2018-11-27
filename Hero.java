@@ -11,6 +11,7 @@ public class Hero extends Mover {
     private final double acc;
     private final double drag;
     public static int diamanten;
+    public static int levens;
 
     public Hero() {
         super();
@@ -19,10 +20,19 @@ public class Hero extends Mover {
         drag = 0.9;
         setImage("p1.png");
     }
+    
+    public void gaatDood(){
+        levens--;
+    }
 
     @Override
     public void act() {
         handleInput();
+        if(levens == 0)
+        {
+            Greenfoot.setWorld(new GameOver());
+            
+        }
         
         velocityX *= drag;
         velocityY += acc;
@@ -33,19 +43,22 @@ public class Hero extends Mover {
 
         for (Actor enemy : getIntersectingObjects(Enemy.class)) {
             if (enemy != null) {
-                getWorld().removeObject(this);
+                Greenfoot.setWorld(new MyWorld());
+                gaatDood();
                 break;
             }
         }
         for (Actor enemy : getIntersectingObjects(Water.class)) {
             if (enemy != null) {
                 Greenfoot.setWorld(new MyWorld());
+                gaatDood();
                 break;
             }
         }
         for (Actor enemy : getIntersectingObjects(Lava.class)) {
             if (enemy != null) {
                 Greenfoot.setWorld(new MyWorld());
+                gaatDood();
                 break;
             }
         }
@@ -53,7 +66,7 @@ public class Hero extends Mover {
         {
             if (enemy != null) {
                 if (Greenfoot.isKeyDown("w")) {
-                    velocityY = -15;
+                    velocityY = -10;
                 }
             }
         }
@@ -61,7 +74,7 @@ public class Hero extends Mover {
         {
             if (enemy != null) {
                 if (Greenfoot.isKeyDown("w")) {
-                    velocityY = -15;
+                    velocityY = -10;
                 }
             }
         }
@@ -69,7 +82,7 @@ public class Hero extends Mover {
         {
             if (enemy != null) {
                 if (Greenfoot.isKeyDown("w")) {
-                    velocityY = -15;
+                    velocityY = -10;
                 }
             }
         }
