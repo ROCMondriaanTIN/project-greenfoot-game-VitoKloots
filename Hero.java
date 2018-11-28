@@ -18,7 +18,7 @@ public class Hero extends Mover {
         gravity = 9.807;
         acc = 0.6;
         drag = 0.9;
-        setImage("p1.png");
+        setImage("speler1.png");
     }
     
     public void gaatDood(){
@@ -63,6 +63,14 @@ public class Hero extends Mover {
             }
         }
         for (Actor enemy : getIntersectingObjects(Chain.class))
+        {
+            if (enemy != null) {
+                if (Greenfoot.isKeyDown("w")) {
+                    velocityY = -10;
+                }
+            }
+        }
+        for (Actor enemy : getIntersectingObjects(Ladder.class))
         {
             if (enemy != null) {
                 if (Greenfoot.isKeyDown("w")) {
