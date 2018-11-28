@@ -30,8 +30,8 @@ public class Hero extends Mover {
         handleInput();
         if(levens == 0)
         {
+            setLocation(884, 1365); 
             Greenfoot.setWorld(new GameOver());
-            
         }
         
         velocityX *= drag;
@@ -51,6 +51,7 @@ public class Hero extends Mover {
         for (Actor enemy : getIntersectingObjects(Water.class)) {
             if (enemy != null) {
                 Greenfoot.setWorld(new MyWorld());
+                //getWorld(this).
                 gaatDood();
                 break;
             }
@@ -92,6 +93,13 @@ public class Hero extends Mover {
                 if (Greenfoot.isKeyDown("w")) {
                     velocityY = -10;
                 }
+            }
+        }
+         for (Actor enemy : getIntersectingObjects(LavaRemove.class)) {
+            if (enemy != null) {
+                Greenfoot.setWorld(new MyWorld());
+                gaatDood();
+                break;
             }
         }
 

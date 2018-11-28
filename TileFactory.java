@@ -89,7 +89,7 @@ tile.isSolid = true;
 break;
 
 case 173:
-tile = new Tile("lavaRemove.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile = new LavaRemove("lavaRemove.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 tile.isSolid = false;
 break;
 

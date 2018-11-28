@@ -28,7 +28,7 @@ public class VragenBoard extends Mover
                 getWorld().addObject(new Diamand(), 1187,2125);
                 getWorld().addObject(new Diamand(), 1287,2125);
                 getWorld().removeObject(this);
-                //getWorld().removeObject(
+                //getWorld().removeClass(
             }
         }
         
