@@ -87,13 +87,8 @@ public class MyWorld extends World {
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
         addObject(new Letter('H'), 415, 2335);
-        addObject(new Letter('V'), 415, 2335);
-        addObject(new Letter('H'), 415, 2335);
-        addObject(new Letter('E'), 415, 2335);
-        addObject(new Letter('L'), 415, 2335);
-        addObject(new Letter('L'), 415, 2335);
-        addObject(new Letter('A'), 415, 2335);
-        addObject(new Letter('S'), 415, 2335);
+        addObject(new Hill_Large(), 856, 2335);
+        
         
         vragenboard = new VragenBoard(ce, te);
         addObject(vragenboard, 884, 1365); 
