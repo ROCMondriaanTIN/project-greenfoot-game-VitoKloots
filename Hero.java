@@ -23,6 +23,7 @@ public class Hero extends Mover {
     
     public void gaatDood(){
         levens--;
+        Letter.teller = 0;
     }
 
     @Override
@@ -95,16 +96,9 @@ public class Hero extends Mover {
                 }
             }
         }
-         for (Actor enemy : getIntersectingObjects(LavaRemove.class)) {
-            if (enemy != null) {
-                Greenfoot.setWorld(new MyWorld());
-                gaatDood();
-                break;
-            }
-        }
 
         
-        Actor diamand = getOneIntersectingObject(Diamand.class);
+        for(Actor diamand : getIntersectingObjects(Diamand.class))
         {
             if(diamand != null)
             {

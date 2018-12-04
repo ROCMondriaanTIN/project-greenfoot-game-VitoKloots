@@ -49,7 +49,7 @@ tile.isSolid = false;
 break;
 
 case 90:
-tile = new Lava("liquidLava.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile = new Lava("liquidLava.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.LAVA);
 tile.isSolid = false;
 break;
 
@@ -89,7 +89,7 @@ tile.isSolid = true;
 break;
 
 case 173:
-tile = new LavaRemove("lavaRemove.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile = new Lava("liquidLava.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT, TileType.LAVA_REMOVE);
 tile.isSolid = false;
 break;
 

@@ -20,6 +20,8 @@ public class GameOver extends World
         Greenfoot.start();
         this.setBackground("imageedit_3_3840241897.png");
         Hero.levens = 1;
+        Hero.diamanten = 0;
+        Scoreboard.aantalDiamanten = 0;
     }
     
     public void act()

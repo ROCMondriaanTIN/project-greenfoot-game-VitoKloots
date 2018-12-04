@@ -8,29 +8,44 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VragenBoard extends Mover
 {
+    private CollisionEngine collisionEngine;
+    private TileEngine tileEngine;
     
-        
-    public VragenBoard()
+    public VragenBoard(CollisionEngine collisionEngine, TileEngine tileEngine)
     {
         setImage("VragenBord.png");
+        this.tileEngine = tileEngine;
+        this.collisionEngine = collisionEngine;        
     }
     public void act() 
     {
         applyVelocity();
         click();
-        
-    }    
+    }   
     void click(){
-        if(Greenfoot.mouseClicked(this)){
-            String antwoord = Greenfoot.ask("wat is fiets in het engels?");            
-            if("bike".equals((antwoord)) ||("Bike".equals(antwoord))){     
+            if(Greenfoot.mouseClicked(this)){
+            String kleineLetters;
+            String antwoord = Greenfoot.ask("Wat is fiets in het engels?");
+            antwoord = antwoord.toLowerCase();
+            if("bike".equals((antwoord)) ||("bicycle".equals(antwoord))){     
                 getWorld().addObject(new Diamand(), 1087,2125);
                 getWorld().addObject(new Diamand(), 1187,2125);
                 getWorld().addObject(new Diamand(), 1287,2125);
+            }else
+                    {
+                        Greenfoot.setWorld(new GameOver());
+                    }
+                
+               for (Tile tile : getWorld().getObjects(Lava.class)) {
+                   if(tile.type == TileType.LAVA_REMOVE){
+                        tileEngine.removeTile(tile);
+                    }
+                    
+                }
+                
                 getWorld().removeObject(this);
-                //getWorld().remove(
-            }
+            
         }
-        
-    }    
-}
+    }
+}    
+

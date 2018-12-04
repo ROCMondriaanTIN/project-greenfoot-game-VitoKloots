@@ -14,4 +14,6 @@ public enum TileType {
     WATER,
     BOX,
     // Add your own tile types here
+    LAVA_REMOVE,
+    LAVA
 }

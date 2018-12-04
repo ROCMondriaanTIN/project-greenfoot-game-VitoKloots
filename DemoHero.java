@@ -44,7 +44,12 @@ public class DemoHero extends Mover {
                 return;
             }
         }
-
+        for (Tile tile : getWorld().getObjects(Tile.class)) {
+            if (tile.type == TileType.WATER) {
+                tileEngine.removeTile(tile);
+            }
+            
+        }
         List<Tile> tiles = collisionEngine.getCollidingTiles(this, true);
 
         for (Tile tile : tiles) {

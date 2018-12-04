@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.ArrayList;
 /**
  * Write a description of class Scoreboard here.
  * 
@@ -9,9 +9,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Scoreboard extends Actor
 {
     
-    private int aantalDiamanten = 0;
+    protected static int aantalDiamanten = 0;
     
-    
+    public Scoreboard(){
+        setImage(new GreenfootImage("X  " + aantalDiamanten, 30, Color.WHITE, new Color(0, 0, 0, 0)));
+    }
     public void addDiamanten()
     {
        aantalDiamanten++; 

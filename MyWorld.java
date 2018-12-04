@@ -1,3 +1,4 @@
+
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
@@ -10,7 +11,7 @@ public class MyWorld extends World {
     private CollisionEngine ce;
     private Scoreboard scoreboard;
     private VragenBoard vragenboard;
-    private LavaRemove lavaremove;
+    private int teller;
     
 
     /**
@@ -20,7 +21,7 @@ public class MyWorld extends World {
     public MyWorld() {
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1, false);
-        this.setBackground("BERGEN ACHTERGROND1.jpg");      
+        this.setBackground("bg_castle.png");      
         
         int[][] map = {
             {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1},
@@ -85,12 +86,19 @@ public class MyWorld extends World {
         addObject(new Diamant(), 29, 30);
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
-        vragenboard = new VragenBoard();
-        addObject(vragenboard, 884, 1365);
-        //addObject(new LavaRemove(), 900, 1365);
-        //addObject(new LavaRemove(), 900, 1365);
-        addObject(hero, 725, 2125);
+        addObject(new Letter('H'), 415, 2335);
+        addObject(new Letter('V'), 415, 2335);
+        addObject(new Letter('H'), 415, 2335);
+        addObject(new Letter('E'), 415, 2335);
+        addObject(new Letter('L'), 415, 2335);
+        addObject(new Letter('L'), 415, 2335);
+        addObject(new Letter('A'), 415, 2335);
+        addObject(new Letter('S'), 415, 2335);
         
+        vragenboard = new VragenBoard(ce, te);
+        addObject(vragenboard, 884, 1365); 
+        
+        addObject(hero, 725, 2125);
         addObject(new Enemy(), 1344, 2125);
         
         // Force act zodat de camera op de juist plek staat.
