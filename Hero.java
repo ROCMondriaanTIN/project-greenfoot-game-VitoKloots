@@ -96,8 +96,7 @@ public class Hero extends Mover {
                 }
             }
         }
-
-        
+                        
         for(Actor diamand : getIntersectingObjects(Diamand.class))
         {
             if(diamand != null)

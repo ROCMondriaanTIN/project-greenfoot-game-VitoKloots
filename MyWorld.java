@@ -114,5 +114,10 @@ public class MyWorld extends World {
     @Override
     public void act() {
         ce.update();
+        if(Letter.teller == 4)
+        {
+            addObject(new Key(), 1187,2125);
+            Letter.teller++;
+        }
     }
 }
