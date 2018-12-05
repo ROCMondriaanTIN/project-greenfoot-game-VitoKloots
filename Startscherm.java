@@ -18,7 +18,8 @@ public class Startscherm extends World
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(1000, 800, 1); 
         Greenfoot.start();
-        this.setBackground("Floating_island_startscherm.png");
+        this.setBackground("achtergrond7.jpg");
+        getBackground().scale(1000, 800);
         Hero.levens = 1;
         Letter.teller = 0;
     }

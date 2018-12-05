@@ -7,7 +7,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @version (a version number or a date)
  */
 public class Key extends Mover
-{
+{  
     private int teller;
     public Key(){
         setImage("keyBlue.png");
@@ -17,7 +17,7 @@ public class Key extends Mover
         applyVelocity();        
         for (Actor hero : getIntersectingObjects(Hero.class)) {
             if (hero != null) {
-                getWorld().addObject(new Key(), 800, 700); 
+                getWorld().addObject(new HudKey(), 800, 700); 
                 getWorld().removeObject(this);
                 teller++;
                 break;
