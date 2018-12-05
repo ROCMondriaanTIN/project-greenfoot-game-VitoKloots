@@ -26,6 +26,6 @@ public class GameOver extends World
     
     public void act()
     {
-        if (Greenfoot.isKeyDown("r")) Greenfoot.setWorld(new MyWorld());
+        if (Greenfoot.isKeyDown("r")) Greenfoot.setWorld(new Startscherm());
     }
 }

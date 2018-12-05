@@ -20,6 +20,7 @@ public class Startscherm extends World
         Greenfoot.start();
         this.setBackground("Floating_island_startscherm.png");
         Hero.levens = 1;
+        Letter.teller = 0;
     }
     
     public void act()

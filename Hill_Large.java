@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Hill_Large extends Mover
 {
-    /**
-     * Act - do whatever the Hill_Large wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    private int teller;
     public Hill_Large() 
     {
         setImage("hill_large.png");
@@ -25,14 +22,15 @@ public class Hill_Large extends Mover
     {
         if(Greenfoot.mouseClicked(this))
         {
+            if(teller == 0)
+            {
             getWorld().addObject(new Diamand(), 1087,2125);
             getWorld().addObject(new Diamand(), 1187,2125);
             getWorld().addObject(new Diamand(), 1287,2125);
-            getWorld().removeObject(this);
-            if(Greenfoot.mouseClicked(this))
-            {
-              getWorld().addObject(new Hill_Small(), 856, 2335);
-            }
+            teller ++;
+            //getWorld().removeObject(this);
+            //getWorld().addObject(new Hill_Small(), 856, 2335);
+        }
         }
     }
 }

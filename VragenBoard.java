@@ -31,6 +31,7 @@ public class VragenBoard extends Mover
                 getWorld().addObject(new Diamand(), 1087,2125);
                 getWorld().addObject(new Diamand(), 1187,2125);
                 getWorld().addObject(new Diamand(), 1287,2125);
+                getWorld().addObject(new Letter('V'), 415, 2335);
             }else
                     {
                         Greenfoot.setWorld(new GameOver());
