@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Key extends Mover
 {  
-    private int teller;
+    public static int tellerKey;
     public Key(){
         setImage("keyBlue.png");
     }
@@ -19,7 +19,7 @@ public class Key extends Mover
             if (hero != null) {
                 getWorld().addObject(new HudKey(), 800, 700); 
                 getWorld().removeObject(this);
-                teller++;
+                tellerKey++;
                 break;
             }
         }

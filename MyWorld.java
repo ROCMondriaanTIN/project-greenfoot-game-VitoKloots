@@ -88,6 +88,8 @@ public class MyWorld extends World {
         addObject(scoreboard, 69, 29);
         addObject(new Letter('H'), 415, 2335);
         addObject(new Hill_Large(), 856, 2335);
+        addObject(new Slot(), 4018, 1775);
+        
         
         
         vragenboard = new VragenBoard(ce, te);
