@@ -22,6 +22,7 @@ public class GameOver extends World
         Hero.levens = 1;
         Hero.diamanten = 0;
         Scoreboard.aantalDiamanten = 0;
+        Key.tellerKey = 0;
     }
     
     public void act()

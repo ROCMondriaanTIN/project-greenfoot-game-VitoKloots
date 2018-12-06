@@ -18,7 +18,7 @@ public class Slot extends Mover
         
         for (Actor hero : getIntersectingObjects(Hero.class))
         {
-            if((hero != null)&&((Key.tellerKey >= 1))){
+            if((hero != null)&&((Key.tellerKey == 1))){
                 getWorld().addObject(new DeurMid(), 4018, 1790);
                 getWorld().addObject(new DeurTop(), 4018, 1700);
                 getWorld().removeObject(this);
