@@ -17,7 +17,7 @@ public class IntroductieLevelKnop extends Actor
     {
        if(Greenfoot.mouseClicked(this)) 
         {
-            Greenfoot.setWorld(new Level1());
+            Greenfoot.setWorld(new IntroductieLevel());
         } 
     }    
 }

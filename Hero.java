@@ -12,20 +12,41 @@ public class Hero extends Mover {
     private final double drag;
     public static int diamanten;
     public static int levens;
+    public static int wereld;
+    GreenfootImage[] images = new GreenfootImage[11];
+    int imageNumber;
 
     public Hero() {
         super();
         gravity = 9.807;
         acc = 0.6;
         drag = 0.9;
-        setImage("speler1.png");
+        if(Speler1.HeroSelecter == 1)
+        {
+           setImage("p1.png");
+        }
+        if(Speler1.HeroSelecter == 2)
+        {
+           setImage("p2.png");
+        }
+        if(Speler1.HeroSelecter == 3)
+        {
+           setImage("p3.png");
+        }
+        
+        for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + (Speler1.HeroSelecter+1) + "_walk" + (i+1) + ".png" );
+        setImage( images[imageNumber] );
     }
     
     public void gaatDood(){
         levens--;
         Letter.teller = 0;
     }
-
+    
+     public void animation(){
+        imageNumber = ( imageNumber + 1 ) % images.length;
+        setImage( images[imageNumber] );
+    }
     @Override
     public void act() {
         handleInput();
@@ -99,12 +120,13 @@ public class Hero extends Mover {
                         
         for(Actor diamand : getIntersectingObjects(Diamand.class))
         {
-            if(diamand != null)
+            if((diamand != null))
             {
                 World myWorld = getWorld();
                 getWorld().removeObject(diamand);
                 diamanten++;
-                MyWorld world = getWorldOfType(MyWorld.class);
+                IntroductieLevel world = (IntroductieLevel)myWorld;
+                
                 if(world!= null) {
                     world.getScoreboard().addDiamanten();
                 }
@@ -120,8 +142,10 @@ public class Hero extends Mover {
 
         if (Greenfoot.isKeyDown("a")) {
             velocityX = -5;
+            animation();
         } else if (Greenfoot.isKeyDown("d")) {
             velocityX = 5;
+            animation();
         }
     }
     boolean onGround()

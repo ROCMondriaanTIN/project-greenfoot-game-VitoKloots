@@ -143,6 +143,26 @@ tile = new RopeVertical("ropeVertical.png", TileEngine.TILE_WIDTH, TileEngine.TI
 tile.isSolid = false;
 break;
 
+case 125:
+tile = new Tile("sign.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile.isSolid = false;
+break;
+
+case 128:
+tile = new Tile("signRight.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile.isSolid = false;
+break;
+
+case 36:
+tile = new Tile("castleMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile.isSolid = true;
+break;
+
+case 19:
+tile = new Tile("castleCenter.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
+tile.isSolid = true;
+break;
+
 default:
 tile = new Tile("grassMid.png", TileEngine.TILE_WIDTH, TileEngine.TILE_HEIGHT);
 tile.isSolid = true;
