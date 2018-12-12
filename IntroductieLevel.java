@@ -86,15 +86,18 @@ public class IntroductieLevel extends World {
         addObject(new Diamand(), 400, 2100);
         addObject(new Diamant(), 29, 30);
         addObject(new WelkomTekst(), 469, 2153);
+        addObject(new LadderTekst(), 1796, 2153);
+        addObject(new EnemyTekst(), 2747, 2153);
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
         addObject(new TimerIntroductie(), 902, 45);
+        
         
         vragenboard = new VragenBoard(ce, te);
         addObject(vragenboard, 884, 1365); 
         
         addObject(hero, 348, 2334);
-        addObject(new Enemy(), 1344, 2310);
+        addObject(new Enemy(), 2760, 2310);
         
         // Force act zodat de camera op de juist plek staat.
         camera.act();
