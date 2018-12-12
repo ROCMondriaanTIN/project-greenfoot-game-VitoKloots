@@ -15,7 +15,7 @@ public class DeurMid extends Mover
     public void act() 
     {
         applyVelocity();
-        if (Greenfoot.isKeyDown("s")) Greenfoot.setWorld(new Startscherm());
+        
         
     }    
 }

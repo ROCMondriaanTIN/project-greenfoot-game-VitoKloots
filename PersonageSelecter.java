@@ -17,9 +17,14 @@ public class PersonageSelecter extends World
     {    
         super(1000, 800, 1);
         this.setBackground("achtergrond9.jpg");
-        
         addObject(new Speler1(), 266, 400);
-        addObject(new Speler2(), 522, 400);
-        addObject(new Speler3(), 789, 400);
+        if(Hero.levelKey == 1)
+        {
+            addObject(new Speler2(), 522, 400);
+        }
+        if(Hero.levelKey == 2)
+        {
+            addObject(new Speler3(), 789, 400);
+        }
     }
 }

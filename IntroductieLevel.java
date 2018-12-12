@@ -91,6 +91,12 @@ public class IntroductieLevel extends World {
         scoreboard = new Scoreboard();
         addObject(scoreboard, 69, 29);
         addObject(new TimerIntroductie(), 902, 45);
+        addObject(new Slot(), 4406, 2403); 
+        addObject(new Key(), 4200, 2403);
+        if(Key.tellerKey == 1)
+        {
+            Key.tellerKey--;
+        }
         
         
         vragenboard = new VragenBoard(ce, te);

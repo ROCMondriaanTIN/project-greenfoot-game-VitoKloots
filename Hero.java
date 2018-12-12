@@ -13,6 +13,7 @@ public class Hero extends Mover {
     public static int diamanten;
     public static int levens;
     public static int wereld;
+    public static int levelKey;
     GreenfootImage[] images = new GreenfootImage[11];
     int imageNumber;
 
@@ -121,14 +122,16 @@ public class Hero extends Mover {
         {
             if(Key.tellerKey == 1)
             {
-                setImage("door_openMid.png");
-                Key.tellerKey--;
+                
             }
             
         }
         for (Actor enemy : getIntersectingObjects(DeurMid.class))
         {
             if (Greenfoot.isKeyDown("s")) Greenfoot.setWorld(new Startscherm());
+            {
+                levelKey++;
+            }
         }
                         
         for(Actor diamand : getIntersectingObjects(Diamand.class))
