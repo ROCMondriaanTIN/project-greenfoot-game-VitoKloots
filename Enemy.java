@@ -12,10 +12,11 @@ public class Enemy extends Mover {
     private int xMax;
     private boolean firstAct;
     private int speed;
+    private int afbeelding;
 
     public Enemy() {
         super();
-        setImage("pokerMad.png");
+        setImage("flyFly1.png");
         getImage().mirrorHorizontally();
         walkRange = 140;
         firstAct = true;
@@ -26,6 +27,7 @@ public class Enemy extends Mover {
     public void act() {
         int x = getX();
         int y = getY();
+        
 
         if (firstAct) {
             firstAct = false;

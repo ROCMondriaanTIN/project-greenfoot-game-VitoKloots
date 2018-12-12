@@ -94,7 +94,7 @@ public class IntroductieLevel extends World {
         addObject(vragenboard, 884, 1365); 
         
         addObject(hero, 348, 2334);
-        addObject(new Enemy(), 1344, 2716);
+        addObject(new Enemy(), 1344, 2310);
         
         // Force act zodat de camera op de juist plek staat.
         camera.act();
