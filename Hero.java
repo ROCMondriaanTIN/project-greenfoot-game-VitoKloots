@@ -117,6 +117,19 @@ public class Hero extends Mover {
                 }
             }
         }
+        for (Actor enemy : getIntersectingObjects(Slot.class))
+        {
+            if(Key.tellerKey == 1)
+            {
+                setImage("door_openMid.png");
+                Key.tellerKey--;
+            }
+            
+        }
+        for (Actor enemy : getIntersectingObjects(DeurMid.class))
+        {
+            if (Greenfoot.isKeyDown("s")) Greenfoot.setWorld(new Startscherm());
+        }
                         
         for(Actor diamand : getIntersectingObjects(Diamand.class))
         {
@@ -132,6 +145,7 @@ public class Hero extends Mover {
                 }
             }
         }
+        
     }
     public void handleInput() 
     {
