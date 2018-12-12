@@ -34,7 +34,7 @@ public class Hero extends Mover {
            setImage("p3.png");
         }
         
-        for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + (Speler1.HeroSelecter+1) + "_walk" + (i+1) + ".png" );
+        for( int i=0; i<images.length; i++ ) images[i] = new GreenfootImage( "p" + (Speler1.HeroSelecter) + "_walk" + (i+1) + ".png" );
         setImage( images[imageNumber] );
     }
     

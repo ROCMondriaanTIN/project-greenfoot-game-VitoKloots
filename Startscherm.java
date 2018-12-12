@@ -26,6 +26,6 @@ public class Startscherm extends World
     
     public void act()
     {
-        if (Greenfoot.isKeyDown("enter")) Greenfoot.setWorld(new LevelSelecter());
+        if (Greenfoot.isKeyDown("enter")) Greenfoot.setWorld(new PersonageSelecter());
     }
 }
